@@ -71,6 +71,15 @@ class TopMenu extends Component {
                   Photos
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  activeClassName="nav-item active"
+                  to={"/users"}
+                >
+                  Users
+                </NavLink>
+              </li>
             </ul>
           </div>
         </nav>
