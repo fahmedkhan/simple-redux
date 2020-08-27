@@ -1,19 +1,19 @@
 import React from "react";
-import "./App.css";
-import Posts from "./components/Posts";
-import Postform from "./components/Postform";
-import { Provider } from "react-redux";
-import store from "./store";
+import { Switch, Route, HashRouter } from "react-router-dom";
+import TopMenu from "./components/TopMenu";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <Postform />
-        <hr />
-        <Posts />
+    <HashRouter history="browserHistory">
+      <div>
+        <TopMenu />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/home" component={Home} />
+        </Switch>
       </div>
-    </Provider>
+    </HashRouter>
   );
 }
 
