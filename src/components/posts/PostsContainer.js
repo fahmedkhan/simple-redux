@@ -21,21 +21,23 @@ function PostsContainer({ postData, fetchPosts }) {
             </div>
           </div>
           <table className="table">
-            {postData &&
-              postData.posts &&
-              postData.posts.map((post) => (
-                <tr>
-                  <td>{post.id}</td>
-                  <td>{post.userId}</td>
-                  <td>{post.title}</td>
-                  <td>{post.body}</td>
-                  <td>
-                    <button className="btn btn-sm btn-primary">Detail</button>{" "}
-                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
-                    <button className="btn btn-sm btn-primary">Delete</button>
-                  </td>
-                </tr>
-              ))}
+            <tbody>
+              {postData &&
+                postData.posts &&
+                postData.posts.map((post) => (
+                  <tr key={post.id}>
+                    <td>{post.id}</td>
+                    <td>{post.userId}</td>
+                    <td>{post.title}</td>
+                    <td>{post.body}</td>
+                    <td>
+                      <button className="btn btn-sm btn-primary">Detail</button>{" "}
+                      <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                      <button className="btn btn-sm btn-primary">Delete</button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
           </table>
         </div>
       </main>

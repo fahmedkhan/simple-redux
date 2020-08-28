@@ -21,21 +21,23 @@ function TodosContainer({ todoData, fetchTodos }) {
             </div>
           </div>
           <table className="table">
-            {todoData &&
-              todoData.todos &&
-              todoData.todos.map((todo) => (
-                <tr>
-                  <td>{todo.id}</td>
-                  <td>{todo.userId}</td>
-                  <td>{todo.title}</td>
-                  <td>{todo.completed ? "Completed" : "Pending"}</td>
-                  <td>
-                    <button className="btn btn-sm btn-primary">Detail</button>{" "}
-                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
-                    <button className="btn btn-sm btn-primary">Delete</button>
-                  </td>
-                </tr>
-              ))}
+            <tbody>
+              {todoData &&
+                todoData.todos &&
+                todoData.todos.map((todo) => (
+                  <tr key={todo.id}>
+                    <td>{todo.id}</td>
+                    <td>{todo.userId}</td>
+                    <td>{todo.title}</td>
+                    <td>{todo.completed ? "Completed" : "Pending"}</td>
+                    <td>
+                      <button className="btn btn-sm btn-primary">Detail</button>{" "}
+                      <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                      <button className="btn btn-sm btn-primary">Delete</button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
           </table>
         </div>
       </main>

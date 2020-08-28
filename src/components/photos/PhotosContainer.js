@@ -21,29 +21,31 @@ function PhotosContainer({ photoData, fetchPhotos }) {
             </div>
           </div>
           <table className="table">
-            {photoData &&
-              photoData.photos &&
-              photoData.photos.map((photo) => (
-                <tr>
-                  <td>{photo.id}</td>
-                  <td>{photo.albumId}</td>
-                  <td>
-                    <img src={photo.url} className="img-thumbnail" alt="" />
-                  </td>
-                  <td>
-                    <img
-                      src={photo.thumbnailUrl}
-                      className="img-thumbnail"
-                      alt=""
-                    />
-                  </td>
-                  <td>
-                    <button className="btn btn-sm btn-primary">Detail</button>{" "}
-                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
-                    <button className="btn btn-sm btn-primary">Delete</button>
-                  </td>
-                </tr>
-              ))}
+            <tbody>
+              {photoData &&
+                photoData.photos &&
+                photoData.photos.map((photo) => (
+                  <tr key={photo.id}>
+                    <td>{photo.id}</td>
+                    <td>{photo.albumId}</td>
+                    <td>
+                      <img src={photo.url} className="img-thumbnail" alt="" />
+                    </td>
+                    <td>
+                      <img
+                        src={photo.thumbnailUrl}
+                        className="img-thumbnail"
+                        alt=""
+                      />
+                    </td>
+                    <td>
+                      <button className="btn btn-sm btn-primary">Detail</button>{" "}
+                      <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                      <button className="btn btn-sm btn-primary">Delete</button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
           </table>
         </div>
       </main>

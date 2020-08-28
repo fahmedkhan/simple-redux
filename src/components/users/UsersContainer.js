@@ -44,7 +44,6 @@ function UsersContainer({ userData, fetchUsers }) {
           </table>
         </div>
       </main>
-      <AddUser isOpen={this.setModal} toggle={this.toggle} />
     </div>
   );
 }

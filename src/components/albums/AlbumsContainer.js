@@ -21,20 +21,22 @@ function AlbumsContainer({ albumData, fetchAlbums }) {
             </div>
           </div>
           <table className="table">
-            {albumData &&
-              albumData.albums &&
-              albumData.albums.map((album) => (
-                <tr>
-                  <td>{album.id}</td>
-                  <td>{album.userId}</td>
-                  <td>{album.title}</td>
-                  <td>
-                    <button className="btn btn-sm btn-primary">Detail</button>{" "}
-                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
-                    <button className="btn btn-sm btn-primary">Delete</button>
-                  </td>
-                </tr>
-              ))}
+            <tbody>
+              {albumData &&
+                albumData.albums &&
+                albumData.albums.map((album) => (
+                  <tr key={album.id}>
+                    <td>{album.id}</td>
+                    <td>{album.userId}</td>
+                    <td>{album.title}</td>
+                    <td>
+                      <button className="btn btn-sm btn-primary">Detail</button>{" "}
+                      <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                      <button className="btn btn-sm btn-primary">Delete</button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
           </table>
         </div>
       </main>
