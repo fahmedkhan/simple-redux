@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { fetchUsers } from "../../redux";
-import AddUser from "./AddUser";
+import { Modal } from "react-bootstrap";
 
 function UsersContainer({ userData, fetchUsers }) {
   useEffect(() => {
