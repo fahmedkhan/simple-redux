@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchTodos } from "../redux";
+import { fetchTodos } from "../../redux";
 
 function TodosContainer({ todoData, fetchTodos }) {
   useEffect(() => {
@@ -15,6 +15,11 @@ function TodosContainer({ todoData, fetchTodos }) {
       <main className="container">
         <h3>Todos List</h3>
         <div>
+          <div className="row">
+            <div className="col-md-12 pt-3 pb-3">
+              <div className="btn btn-sm btn-primary">Add Todo</div>
+            </div>
+          </div>
           <table className="table">
             {todoData &&
               todoData.todos &&
@@ -25,6 +30,7 @@ function TodosContainer({ todoData, fetchTodos }) {
                   <td>{todo.title}</td>
                   <td>{todo.completed ? "Completed" : "Pending"}</td>
                   <td>
+                    <button className="btn btn-sm btn-primary">Detail</button>{" "}
                     <button className="btn btn-sm btn-primary">Edit</button>{" "}
                     <button className="btn btn-sm btn-primary">Delete</button>
                   </td>

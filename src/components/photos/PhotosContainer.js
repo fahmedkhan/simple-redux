@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchPhotos } from "../redux";
+import { fetchPhotos } from "../../redux";
 
 function PhotosContainer({ photoData, fetchPhotos }) {
   useEffect(() => {
@@ -15,6 +15,11 @@ function PhotosContainer({ photoData, fetchPhotos }) {
       <main className="container">
         <h3>Photos List</h3>
         <div>
+          <div className="row">
+            <div className="col-md-12 pt-3 pb-3">
+              <div className="btn btn-sm btn-primary">Add Photo</div>
+            </div>
+          </div>
           <table className="table">
             {photoData &&
               photoData.photos &&
@@ -33,6 +38,7 @@ function PhotosContainer({ photoData, fetchPhotos }) {
                     />
                   </td>
                   <td>
+                    <button className="btn btn-sm btn-primary">Detail</button>{" "}
                     <button className="btn btn-sm btn-primary">Edit</button>{" "}
                     <button className="btn btn-sm btn-primary">Delete</button>
                   </td>

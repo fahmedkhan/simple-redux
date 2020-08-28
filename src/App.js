@@ -4,11 +4,11 @@ import TopMenu from "./components/TopMenu";
 import Home from "./components/Home";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import UsersContainer from "./components/UsersContainer";
-import TodosContainer from "./components/TodosContainer";
-import PhotosContainer from "./components/PhotosContainer";
-import PostsContainer from "./components/PostsContainer";
-import AlbumsContainer from "./components/AlbumsContainer";
+import UsersContainer from "./components/users/UsersContainer";
+import TodosContainer from "./components/todos/TodosContainer";
+import PhotosContainer from "./components/photos/PhotosContainer";
+import PostsContainer from "./components/posts/PostsContainer";
+import AlbumsContainer from "./components/albums/AlbumsContainer";
 
 function App() {
   return (
