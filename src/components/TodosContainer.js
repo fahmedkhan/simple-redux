@@ -24,6 +24,10 @@ function TodosContainer({ todoData, fetchTodos }) {
                   <td>{todo.userId}</td>
                   <td>{todo.title}</td>
                   <td>{todo.completed ? "Completed" : "Pending"}</td>
+                  <td>
+                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                    <button className="btn btn-sm btn-primary">Delete</button>
+                  </td>
                 </tr>
               ))}
           </table>

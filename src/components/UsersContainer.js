@@ -25,7 +25,11 @@ function UsersContainer({ userData, fetchUsers }) {
                   <td>{user.username}</td>
                   <td>{user.email}</td>
                   <td>{user.phone}</td>
-                  <td>{user.website}</td>
+                  <td>
+                    <button className="btn btn-sm btn-primary">Detail</button>{" "}
+                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                    <button className="btn btn-sm btn-primary">Delete</button>
+                  </td>
                 </tr>
               ))}
           </table>

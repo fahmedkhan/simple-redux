@@ -23,6 +23,10 @@ function AlbumsContainer({ albumData, fetchAlbums }) {
                   <td>{album.id}</td>
                   <td>{album.userId}</td>
                   <td>{album.title}</td>
+                  <td>
+                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                    <button className="btn btn-sm btn-primary">Delete</button>
+                  </td>
                 </tr>
               ))}
           </table>

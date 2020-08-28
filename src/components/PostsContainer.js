@@ -24,6 +24,10 @@ function PostsContainer({ postData, fetchPosts }) {
                   <td>{post.userId}</td>
                   <td>{post.title}</td>
                   <td>{post.body}</td>
+                  <td>
+                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                    <button className="btn btn-sm btn-primary">Delete</button>
+                  </td>
                 </tr>
               ))}
           </table>

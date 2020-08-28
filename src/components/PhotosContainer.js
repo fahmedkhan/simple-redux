@@ -32,6 +32,10 @@ function PhotosContainer({ photoData, fetchPhotos }) {
                       alt=""
                     />
                   </td>
+                  <td>
+                    <button className="btn btn-sm btn-primary">Edit</button>{" "}
+                    <button className="btn btn-sm btn-primary">Delete</button>
+                  </td>
                 </tr>
               ))}
           </table>
